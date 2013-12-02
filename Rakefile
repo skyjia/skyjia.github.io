@@ -20,19 +20,15 @@ end
 
 desc "Generate and publish blog to gh-pages"
 task :publish => [:generate] do
-  Dir.mktmpdir do |tmp|
-    cp_r "_site/.", tmp
+  publish = "_github_publish/"
+  cp_r "_site/.", publish
+  pwd = Dir.pwd
+  Dir.chdir publish
 
-    pwd = Dir.pwd
-    Dir.chdir tmp
+  message = "Site updated at #{Time.now.utc}"
+  system "git add . -A"
+  system "git commit -m #{message.inspect}"
+  system "git push origin master"
 
-    system "git init"
-    system "git add ."
-    message = "Site updated at #{Time.now.utc}"
-    system "git commit -m #{message.inspect}"
-    system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
-    system "git push origin master --force"
-
-    Dir.chdir pwd
-  end
+  Dir.chdir pwd
 end
