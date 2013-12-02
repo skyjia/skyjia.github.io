@@ -45,26 +45,6 @@ Really simple and easy to use!&lt;/p&gt;
       <pubDate>Thu, 28 Nov 2013 01:03:46 -0000</pubDate>
       <dc:date>2013-11-28T01:03:46Z</dc:date>
     </item>
-    <item>
-      <title>iNews - 构建您自己的Hacker News</title>
-      <link>http://www.skyjia.com/event/2013/11/28/inews.html</link>
-      <description>&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;    &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;                 
-   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/__ _      _______&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;  /&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/| /&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;___&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/|  /&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;sr&quot;&gt;/_/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;___&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;____&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      <pubDate>Thu, 28 Nov 2013 01:03:46 -0000</pubDate>
-      <dc:date>2013-11-28T01:03:46Z</dc:date>
-    </item>
-    <item>
-      <title>Introduction to Docker</title>
-      <link>http://www.skyjia.com/work/2013/11/27/an-introduction-to-docker.html</link>
-      <description>&lt;h1&gt;Docker: the Linux container engine&lt;/h1&gt;
-</description>
-      <pubDate>Wed, 27 Nov 2013 01:03:46 -0000</pubDate>
-      <dc:date>2013-11-27T01:03:46Z</dc:date>
-    </item>
     <dc:date>2013-11-29T15:03:46Z</dc:date>
   </channel>
 </rss>
