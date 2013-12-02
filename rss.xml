@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Sky JIA</title>
+    <link>http://www.skyjia.com</link>
+    <description>RSS feed for Sky JIA</description>
+    <pubDate>Fri, 29 Nov 2013 15:03:46 -0000</pubDate>
+    <item>
+      <title>T2P4,你往哪里跑</title>
+      <link>http://www.skyjia.com/discovery/2013/11/29/t2p4.html</link>
+      <description>&lt;p&gt;&lt;img src=&quot;http://img3.pconline.com.cn/pconline/0707/31/1069238_02.jpg&quot; alt=&quot;1996年红遍大江南北的MB&quot; title=&quot;1996年红遍大江南北的MB&quot;&gt;&lt;/p&gt;
+</description>
+      <pubDate>Fri, 29 Nov 2013 15:03:46 -0000</pubDate>
+      <dc:date>2013-11-29T15:03:46Z</dc:date>
+    </item>
+    <item>
+      <title>“超级计算”服务器显卡</title>
+      <link>http://www.skyjia.com/discovery/2013/11/29/server-gpu.html</link>
+      <description>&lt;p&gt;GPU服务器和系统针对最新GPU计算模拟充分优化，与最新多核 CPU 系统相比，性能提升10倍，适用于众多 HPC 应用，具有无与伦比的实时可扩展性和突破性的能源效率。我们的高性能配置系统性能卓越，无缝集成GPU计算，可用于极速性能应用，帮助科研人员解决世界上最复杂的计算难题。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 29 Nov 2013 15:03:46 -0000</pubDate>
+      <dc:date>2013-11-29T15:03:46Z</dc:date>
+    </item>
+    <item>
+      <title>数据中心新动力 LSI推12Gb/s SAS产品</title>
+      <link>http://www.skyjia.com/discovery/2013/11/29/lsi-sas.html</link>
+      <description>&lt;p&gt;与6Gb/s SAS解决方案相比，LSI 12Gb/s SAS MegaRAID控制卡可在无损性能的前提下将数据中心的用户数量提高60%。此外，LSI 12Gb/s SAS扩展器与时下流行的Hadoop平台结合使用还可将吞吐能力提升25%，能够满足更大型、更具可扩展性的新一代服务器和存储系统需求。&lt;/p&gt;
+</description>
+      <pubDate>Fri, 29 Nov 2013 14:03:46 -0000</pubDate>
+      <dc:date>2013-11-29T14:03:46Z</dc:date>
+    </item>
+    <item>
+      <title>List.JS</title>
+      <link>http://www.skyjia.com/discovery/2013/11/28/list-js.html</link>
+      <description>&lt;h1&gt;List.js&lt;/h1&gt;
+
+&lt;p&gt;Perfect library for adding &lt;strong&gt;search&lt;/strong&gt;, &lt;strong&gt;sort&lt;/strong&gt;, &lt;strong&gt;filters&lt;/strong&gt; and &lt;strong&gt;flexibility&lt;/strong&gt; to
+&lt;strong&gt;tables&lt;/strong&gt;, &lt;strong&gt;lists&lt;/strong&gt; and various HTML elements. Built to be invisible and work on existing HTML.
+Really simple and easy to use!&lt;/p&gt;
+</description>
+      <pubDate>Thu, 28 Nov 2013 01:03:46 -0000</pubDate>
+      <dc:date>2013-11-28T01:03:46Z</dc:date>
+    </item>
+    <item>
+      <title>iNews - 构建您自己的Hacker News</title>
+      <link>http://www.skyjia.com/event/2013/11/28/inews.html</link>
+      <description>&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;    &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;                 
+   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/__ _      _______&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;  /&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;|/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/| /&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;___&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/|  /&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;sr&quot;&gt;/_/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;___&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;____&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <pubDate>Thu, 28 Nov 2013 01:03:46 -0000</pubDate>
+      <dc:date>2013-11-28T01:03:46Z</dc:date>
+    </item>
+    <item>
+      <title>Docker介绍</title>
+      <link>http://www.skyjia.com/work/2013/11/27/an-introduction-to-docker.html</link>
+      <description>&lt;h1&gt;Docker: the Linux container engine&lt;/h1&gt;
+</description>
+      <pubDate>Wed, 27 Nov 2013 01:03:46 -0000</pubDate>
+      <dc:date>2013-11-27T01:03:46Z</dc:date>
+    </item>
+    <dc:date>2013-11-29T15:03:46Z</dc:date>
+  </channel>
+</rss>
