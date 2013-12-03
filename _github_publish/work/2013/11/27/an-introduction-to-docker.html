@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sky JIA - Introduction to Docker</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="攒G器是一个关注互联网技术的科技博客" />
+    <meta name="keywords" content="skyjia, jiachao, geeksky, geekskyjia, geek" />
+    <link href="/rss.xml" rel="alternate" title="订阅Sky JIA最新文章" type="application/rss+xml" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Sky JIA</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li >
+          <a href="/discovery" target="_self">Discovery</a>
+        </li>
+        <li class="active">
+          <a href="/work" target="_self">Work</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    <div class="navbar-space"></div>
+    <div class="container">
+  <div class="page-header">
+    <h2>Introduction to Docker</h2>
+    <p class="text-info"><small>27 Nov 2013</small></p>
+    <div class="rdbWrapper" data-show-read-now="1" data-show-read-later="1" data-show-send-to-kindle="1" data-show-print="1" data-show-email="1" data-orientation="0" data-version="1" data-bg-color="#e8f4ec"></div>
+<script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+     <div>
+  	 <h1>Docker: the Linux container engine</h1>
+
+<p>Docker is an open source project to pack, ship and run any application
+as a lightweight container</p>
+
+<p>Docker containers are both <em>hardware-agnostic</em> and
+<em>platform-agnostic</em>. This means that they can run anywhere, from your
+laptop to the largest EC2 compute instance and everything in between -
+and they don&#39;t require that you use a particular language, framework
+or packaging system. That makes them great building blocks for
+deploying and scaling web apps, databases and backend services without
+depending on a particular stack or provider.</p>
+
+<p>Docker is an open-source implementation of the deployment engine which
+powers <a href="http://dotcloud.com">dotCloud</a>, a popular
+Platform-as-a-Service.  It benefits directly from the experience
+accumulated over several years of large-scale operation and support of
+hundreds of thousands of applications and databases.</p>
+
+<p><img src="https://raw.github.com/dotcloud/docker/master/docs/theme/docker/static/img/dockerlogo-h.png" alt="Docker L" title="Docker"></p>
+
+<h2>Better than VMs</h2>
+
+<p>A common method for distributing applications and sandbox their
+execution is to use virtual machines, or VMs. Typical VM formats are
+VMWare&#39;s vmdk, Oracle Virtualbox&#39;s vdi, and Amazon EC2&#39;s ami. In
+theory these formats should allow every developer to automatically
+package their application into a &quot;machine&quot; for easy distribution and
+deployment. In practice, that almost never happens, for a few reasons:</p>
+
+<ul>
+<li><em>Size</em>: VMs are very large which makes them impractical to store
+ and transfer.</li>
+<li><em>Performance</em>: running VMs consumes significant CPU and memory,
+which makes them impractical in many scenarios, for example local
+development of multi-tier applications, and large-scale deployment
+of cpu and memory-intensive applications on large numbers of
+machines.</li>
+<li><em>Portability</em>: competing VM environments don&#39;t play well with each
+ other. Although conversion tools do exist, they are limited and
+ add even more overhead.</li>
+<li><em>Hardware-centric</em>: VMs were designed with machine operators in
+mind, not software developers. As a result, they offer very
+limited tooling for what developers need most: building, testing
+and running their software. For example, VMs offer no facilities
+for application versioning, monitoring, configuration, logging or
+service discovery.</li>
+</ul>
+
+<p>By contrast, Docker relies on a different sandboxing method known as
+<em>containerization</em>. Unlike traditional virtualization,
+containerization takes place at the kernel level. Most modern
+operating system kernels now support the primitives necessary for
+containerization, including Linux with <a href="http://openvz.org">openvz</a>,
+<a href="http://linux-vserver.org">vserver</a> and more recently
+<a href="http://lxc.sourceforge.net">lxc</a>, Solaris with
+<a href="http://docs.oracle.com/cd/E26502_01/html/E29024/preface-1.html#scrolltoc">zones</a>
+and FreeBSD with
+<a href="http://www.freebsd.org/doc/handbook/jails.html">Jails</a>.</p>
+
+<p>Docker builds on top of these low-level primitives to offer developers
+a portable format and runtime environment that solves all 4
+problems. Docker containers are small (and their transfer can be
+optimized with layers), they have basically zero memory and cpu
+overhead, they are completely portable and are designed from the
+ground up with an application-centric design.</p>
+
+<p>The best part: because <code>docker</code> operates at the OS level, it can
+still be run inside a VM!</p>
+
+<h2>Plays well with others</h2>
+
+<p>Docker does not require that you buy into a particular programming
+language, framework, packaging system or configuration language.</p>
+
+<p>Is your application a Unix process? Does it use files, tcp
+connections, environment variables, standard Unix streams and
+command-line arguments as inputs and outputs? Then <code>docker</code> can run
+it.</p>
+
+<p>Can your application&#39;s build be expressed as a sequence of such
+commands? Then <code>docker</code> can build it.</p>
+
+<h2>Escape dependency hell</h2>
+
+<p>A common problem for developers is the difficulty of managing all
+their application&#39;s dependencies in a simple and automated way.</p>
+
+<p>This is usually difficult for several reasons:</p>
+
+<ul>
+<li><p><em>Cross-platform dependencies</em>. Modern applications often depend on
+a combination of system libraries and binaries, language-specific
+packages, framework-specific modules, internal components
+developed for another project, etc. These dependencies live in
+different &quot;worlds&quot; and require different tools - these tools
+typically don&#39;t work well with each other, requiring awkward
+custom integrations.</p></li>
+<li><p>Conflicting dependencies. Different applications may depend on
+different versions of the same dependency. Packaging tools handle
+these situations with various degrees of ease - but they all
+handle them in different and incompatible ways, which again forces
+the developer to do extra work.</p></li>
+<li><p>Custom dependencies. A developer may need to prepare a custom
+version of their application&#39;s dependency. Some packaging systems
+can handle custom versions of a dependency, others can&#39;t - and all
+of them handle it differently.</p></li>
+</ul>
+
+<p>Docker solves dependency hell by giving the developer a simple way to
+express <em>all</em> their application&#39;s dependencies in one place, and
+streamline the process of assembling them. If this makes you think of
+<a href="http://xkcd.com/927/">XKCD 927</a>, don&#39;t worry. Docker doesn&#39;t
+<em>replace</em> your favorite packaging systems. It simply orchestrates
+their use in a simple and repeatable way. How does it do that? With
+layers.</p>
+
+<p>Docker defines a build as running a sequence of Unix commands, one
+after the other, in the same container. Build commands modify the
+contents of the container (usually by installing new files on the
+filesystem), the next command modifies it some more, etc. Since each
+build command inherits the result of the previous commands, the
+<em>order</em> in which the commands are executed expresses <em>dependencies</em>.</p>
+
+<p>Here&#39;s a typical Docker build process:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">from ubuntu:12.10
+run apt-get update
+run <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive apt-get install -q -y python
+run <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive apt-get install -q -y python-pip
+run pip install django
+run <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive apt-get install -q -y curl
+run curl -L https://github.com/shykes/helloflask/archive/master.tar.gz <span class="p">|</span> tar -xzv
+run <span class="nb">cd </span>helloflask-master <span class="o">&amp;&amp;</span> pip install -r requirements.txt
+</code></pre></div>
+<p>Note that Docker doesn&#39;t care <em>how</em> dependencies are built - as long
+as they can be built by running a Unix command in a container.</p>
+
+<h1>Getting started</h1>
+
+<p>Docker can be installed on your local machine as well as servers - both bare metal and virtualized.
+It is available as a binary on most modern Linux systems, or as a VM on Windows, Mac and other systems.</p>
+
+<p>We also offer an interactive tutorial for quickly learning the basics of using Docker.</p>
+
+<p>For up-to-date install instructions and online tutorials, see the <a href="http://www.docker.io/gettingstarted/">Getting Started page</a>.</p>
+
+<h1>Usage examples</h1>
+
+<p>Docker can be used to run short-lived commands, long-running daemons (app servers, databases etc.),
+interactive shell sessions, etc.</p>
+
+<p>You can find a <a href="http://docs.docker.io/en/latest/examples/">list of real-world examples</a> in the documentation.</p>
+
+<h2>Under the hood</h2>
+
+<p>Under the hood, Docker is built on the following components:</p>
+
+<ul>
+<li>The
+<a href="http://blog.dotcloud.com/kernel-secrets-from-the-paas-garage-part-24-c">cgroup</a>
+and
+<a href="http://blog.dotcloud.com/under-the-hood-linux-kernels-on-dotcloud-part">namespacing</a>
+capabilities of the Linux kernel;</li>
+<li><a href="http://aufs.sourceforge.net/aufs.html">AUFS</a>, a powerful union
+filesystem with copy-on-write capabilities;</li>
+<li>The <a href="http://golang.org">Go</a> programming language;</li>
+<li><a href="http://lxc.sourceforge.net/">lxc</a>, a set of convenience scripts to
+simplify the creation of Linux containers.</li>
+</ul>
+
+<h1>Contributing to Docker</h1>
+
+<p>Want to hack on Docker? Awesome! There are instructions to get you
+started <a href="CONTRIBUTING.md">here</a>.</p>
+
+<p>They are probably not perfect, please let us know if anything feels
+wrong or incomplete.</p>
+
+<h3>Legal</h3>
+
+<p><em>Brought to you courtesy of our legal counsel. For more context,
+please see the Notice document.</em></p>
+
+<p>Use and transfer of Docker may be subject to certain restrictions by the
+United States and other governments.<br>
+It is your responsibility to ensure that your use and/or transfer does not
+violate applicable laws. </p>
+
+<p>For more information, please see http://www.bis.doc.gov</p>
+
+  	 </div>
+    </div>
+    <div class="col-lg-4">
+    <div class="text-center">
+	<h3>GitHub</h3>
+	<p><a href="https://github.com/skyjia/" target="_blank"><img src="/img/Octocat.jpg" alt="github.com/skyjia" /></a></p>
+	<p><a href="https://github.com/skyjia/" target="_blank">github.com/skyjia</a></p>
+</div>
+    </div>
+  </div>
+</div>
+
+    <footer class="container">
+  <p><strong>&copy; 2013 <a href="http://www.skyjia.com">Sky JIA</a>.</strong></p>
+</footer>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2b7757936f6d2f6717aca0796163016a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46123892-1', 'skyjia.com');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
