@@ -21,4 +21,3 @@
 - 02/2008 Joined in Farefore - geek alliance
 - 07/2008 Began to contribute for NGO projects
 - 06/2011 Founded <a href="http://formcloud.io" target="_blank">FormCloud</a>
-- 11/2013 Founded GTeam, and built <a href="http://cuanjiqi.com" target="_blank">CUANJIQI.COM</a>
