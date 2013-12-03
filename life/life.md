@@ -16,7 +16,6 @@
 - ~2004 My third computer
 - 03/2005-2007 Start-up - SOJUMP.COM
 - 10/2006 Left Wuhan for Beijing
-- 10/2006-07/2007 Intern in Microsoft
-- 10/2007-~ Live and work in Beijing
-- 02/2008 Start-up - Farefore
-- 06/2011 Start-up - FormCloud
+- 10/2007-~ Start to live and work in Beijing
+- 02/2008 Join in Farefore team.
+- 06/2011 Built up FormCloud team.
