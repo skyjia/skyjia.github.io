@@ -26,6 +26,7 @@ task :publish => [:generate] do
   Dir.chdir publish
 
   message = "Site updated at #{Time.now.utc}"
+  system "touch .nojekyll"
   system "git add . -A"
   system "git commit -m #{message.inspect}"
   system "git push origin master"
