@@ -1,7 +1,7 @@
 @Sky Jia' life
 ===============
 
-- 18/10/1984 Born in Wuhan
+- 18/10/1984 Born in <addr>Wuhan</addr>
 - 1988-1990 Kindergarten
 - ~1991 Got my first computer
 - 09/1991-07/1997 Primary School
@@ -15,10 +15,10 @@
 - 09/2003-07/2007 University - School of Software Engineering, Huazhong University of Scicence & Technology
 - 06/2004 Got my third computer
 - 03/2005-10/2006 My first start-up company - SOJUMP.COM
-- 06/2005 SOJUMP.COM was online
-- 10/2006 Left Wuhan for Beijing
-- 11/2006-~ Live and work in Beijing
+- 06/2005 <a href="http://www.sojump.com/" target="_blank">SOJUMP.COM</a> was online
+- 10/2006 Left <addr>Wuhan</addr> for <addr>Beijing</addr>
+- 11/2006-~ Live and work in <addr>Beijing</addr>
 - 02/2008 Joined in Farefore - geek alliance
 - 07/2008 Began to contribute for NGO projects
-- 06/2011 Founded FormCloud
-- 11/2013 Founded GTeam
+- 06/2011 Founded <a href="http://formcloud.io" target="_blank">FormCloud</a>
+- 11/2013 Founded GTeam, and built <a href="http://cuanjiqi.com" target="_blank">CUANJIQI.COM</a>
