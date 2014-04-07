@@ -584,11 +584,11 @@ Introspected tunnels to localhost
 
 - Pushed at: _Dec 21, 2013 7:47AM (UTC)_
 
-### globocom/tsuru
+### tsuru/tsuru
 
 Open source Platform as a Service.
 
-- URL: <https://github.com/globocom/tsuru>
+- URL: <https://github.com/tsuru/tsuru>
 
 - Site: <http://tsuru.io>
 
