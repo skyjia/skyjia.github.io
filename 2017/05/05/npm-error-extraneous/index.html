@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="osx,macos," />
+  <meta name="keywords" content="npm,cnpm,node," />
 
 
 
@@ -90,22 +90,17 @@
 
 
 
-<meta name="description" content="近日把Mac QQ升级到新版之后，看到这样一个英文版 Setting 界面时感觉别扭，应该属于强迫症间歇性发作，实在忍不住想切换到中文界面：  文字格式和用语有差异 不合格的英文翻译    但是，Mac QQ并没有提供选择界面语言的选项，想通过软件内配置切换语言这条路是走不通了。其实Mac QQ是支持多语言的，默认行为是根据当前操作系统配置的语言首选项显示QQ的界面语言。通过 Show Packa">
-<meta name="keywords" content="osx,macos">
+<meta name="description" content="今天在例行检查清理 npm package 时遇到了狗血的npm ERR! extraneous问题： 1234567891011121314151617181920212223242526272829$ npm ls -gp --depth=0/usr/local/lib/usr/local/lib/node_modules/babel-eslint/usr/local/lib/node_mod">
+<meta name="keywords" content="npm,cnpm,node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macOS 下以不同语言启动应用程序">
-<meta property="og:url" content="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/index.html">
+<meta property="og:title" content="npm extraneous error 经历">
+<meta property="og:url" content="http://www.skyjia.com/2017/05/05/npm-error-extraneous/index.html">
 <meta property="og:site_name" content="榕树的随想">
-<meta property="og:description" content="近日把Mac QQ升级到新版之后，看到这样一个英文版 Setting 界面时感觉别扭，应该属于强迫症间歇性发作，实在忍不住想切换到中文界面：  文字格式和用语有差异 不合格的英文翻译    但是，Mac QQ并没有提供选择界面语言的选项，想通过软件内配置切换语言这条路是走不通了。其实Mac QQ是支持多语言的，默认行为是根据当前操作系统配置的语言首选项显示QQ的界面语言。通过 Show Packa">
-<meta property="og:image" content="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-39-36.png">
-<meta property="og:image" content="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-57-13.png">
-<meta property="og:image" content="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-16-23.png">
-<meta property="og:image" content="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-20-08.png">
-<meta property="og:updated_time" content="2017-05-03T04:44:24.000Z">
+<meta property="og:description" content="今天在例行检查清理 npm package 时遇到了狗血的npm ERR! extraneous问题： 1234567891011121314151617181920212223242526272829$ npm ls -gp --depth=0/usr/local/lib/usr/local/lib/node_modules/babel-eslint/usr/local/lib/node_mod">
+<meta property="og:updated_time" content="2017-05-05T08:33:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="macOS 下以不同语言启动应用程序">
-<meta name="twitter:description" content="近日把Mac QQ升级到新版之后，看到这样一个英文版 Setting 界面时感觉别扭，应该属于强迫症间歇性发作，实在忍不住想切换到中文界面：  文字格式和用语有差异 不合格的英文翻译    但是，Mac QQ并没有提供选择界面语言的选项，想通过软件内配置切换语言这条路是走不通了。其实Mac QQ是支持多语言的，默认行为是根据当前操作系统配置的语言首选项显示QQ的界面语言。通过 Show Packa">
-<meta name="twitter:image" content="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-39-36.png">
+<meta name="twitter:title" content="npm extraneous error 经历">
+<meta name="twitter:description" content="今天在例行检查清理 npm package 时遇到了狗血的npm ERR! extraneous问题： 1234567891011121314151617181920212223242526272829$ npm ls -gp --depth=0/usr/local/lib/usr/local/lib/node_modules/babel-eslint/usr/local/lib/node_mod">
 
 
 
@@ -133,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/"/>
+  <link rel="canonical" href="http://www.skyjia.com/2017/05/05/npm-error-extraneous/"/>
 
 
 
 
 
-  <title>macOS 下以不同语言启动应用程序 | 榕树的随想</title>
+  <title>npm extraneous error 经历 | 榕树的随想</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -306,7 +301,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/">
+    <link itemprop="mainEntityOfPage" href="http://www.skyjia.com/2017/05/05/npm-error-extraneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sky Jia">
@@ -327,7 +322,7 @@
             
             
               
-                macOS 下以不同语言启动应用程序
+                npm extraneous error 经历
               
             
           </h1>
@@ -342,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T10:29:43+08:00">
-                2017-04-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T15:25:46+08:00">
+                2017-05-05
               </time>
             
 
@@ -353,28 +348,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -383,9 +356,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/27/osx-run-application-in-a-different-language/#comments" itemprop="discussionUrl">
+                <a href="/2017/05/05/npm-error-extraneous/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/27/osx-run-application-in-a-different-language/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/05/05/npm-error-extraneous/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -410,21 +383,23 @@
       
 
       
-        <p>近日把Mac QQ升级到新版之后，看到这样一个英文版 <strong>Setting</strong> 界面时感觉别扭，应该属于强迫症间歇性发作，实在忍不住想切换到中文界面：</p>
+        <p>今天在例行检查清理 npm package 时遇到了狗血的<code>npm ERR! extraneous</code>问题：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">$ npm ls -gp --depth=0</div><div class="line">/usr/<span class="built_in">local</span>/lib</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/babel-eslint</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/bower</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/browserify</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/coffee-script</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/doctoc</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/electron-prebuilt</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/eslint</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/eslint-plugin-react</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/gitbook-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/google-protobuf</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/graceful-fs</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/grunt-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/gulp</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/gulp-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/hexo-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/js-beautify</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/less</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/npm</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/protobufjs</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/tern</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/typescript</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/vue-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/yo</div><div class="line">npm ERR! extraneous: acorn@4.0.4 /usr/<span class="built_in">local</span>/lib/node_modules/eslint/node_modules/acorn</div><div class="line">npm ERR! extraneous: acorn-jsx@3.0.1 /usr/<span class="built_in">local</span>/lib/node_modules/eslint/node_modules/acorn-jsx</div><div class="line">npm ERR! extraneous: ajv@4.10.3 /usr/<span class="built_in">local</span>/lib/node_modules/eslint/node_modules/ajv</div><div class="line">.......</div></pre></td></tr></table></figure>
+<p>索性来个彻底的清理：</p>
 <ul>
-<li>文字格式和用语有差异</li>
-<li>不合格的英文翻译</li>
+<li>Global packages中，除了<code>npm</code> package，其它的package先全部删除</li>
+<li>安装<code>cnpm</code>，替代<code>npm</code> （你懂的），然后安装回所需的Global packages</li>
 </ul>
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-39-36.png" alt="2017-04-27_10-39-36.png" title="">
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-57-13.png" alt="2017-04-27_10-57-13.png" title="">
-<p>但是，Mac QQ并没有提供选择界面语言的选项，想通过软件内配置切换语言这条路是走不通了。其实Mac QQ是支持多语言的，默认行为是根据当前操作系统配置的语言首选项显示QQ的界面语言。通过 <strong>Show Package Contents</strong> 查看QQ应用程序可以看到内部支持的多语言配置文件信息：</p>
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-16-23.png" alt="2017-05-01_09-16-23.png" title="">
-<p>我当前OS环境配置的系统语言是英文，暂时也不想将系统的语言改回中文，因此通过以下命令行方式指定语言并启动QQ：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ open <span class="_">-a</span> QQ --args -AppleLanguages <span class="string">'(zh-CN)'</span></div></pre></td></tr></table></figure>
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-20-08.png" alt="2017-05-01_09-20-08.png" title="">
-<blockquote>
-<p>实测环境：macOS Sierra 10.12.4</p>
-</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="comment"># 删除npm之外的其它package</span></div><div class="line">$ npm ls -gp --depth=0 | awk -F/ <span class="string">'/node_modules/ &amp;&amp; !/\/npm$/ &#123;print $NF&#125;'</span> | xargs npm -g rm</div></pre></td></tr></table></figure>
+<p>根据淘宝NPM镜像（<a href="https://npm.taobao.org/）安装指导，安装`cnpm`" target="_blank" rel="external">https://npm.taobao.org/）安装指导，安装`cnpm`</a>:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p><strong>原因分析</strong></p>
+<p>本地的node.js是使用Homebrew安装的，由于node版本更新，导致一些安装在global的package出现extraneous问题。修复方式是重新安装（或更新）有问题的package。</p>
+<p><strong>！！！此处敲黑板！！！</strong></p>
+<p>由于Homebrew管理的node会经常升级更新，并且<code>cnpm</code>默认会将package安装到当前运行版本的node安装文件夹之中，这个默认行为会在node再次升级后导致已安装的全局package失效。因此，我们需要手动修改<code>npm</code>的<code>prefix</code>设置。通过修改<code>~/.cnpmrc</code>，增加如下一行记录：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">prefix = <span class="string">"/usr/local"</span></div></pre></td></tr></table></figure>
+<p>此时检查cnpm的配置会发现<code>prefix</code>的默认值已经被覆盖：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ cnpm -g config ls <span class="_">-l</span> | grep <span class="string">"prefix"</span></div><div class="line">prefix = <span class="string">"/usr/local"</span></div><div class="line">; prefix = <span class="string">"/usr/local/Cellar/node/7.9.0"</span> (overridden)</div><div class="line">save-prefix = <span class="string">"^"</span></div><div class="line">tag-version-prefix = <span class="string">"v"</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -454,9 +429,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/osx/" rel="tag"># osx</a>
+            <a href="/tags/npm/" rel="tag"># npm</a>
           
-            <a href="/tags/macos/" rel="tag"># macos</a>
+            <a href="/tags/cnpm/" rel="tag"># cnpm</a>
+          
+            <a href="/tags/node/" rel="tag"># node</a>
           
         </div>
       
@@ -469,15 +446,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/27/osx-run-application-in-a-different-language/" rel="next" title="macOS 下以不同语言启动应用程序">
+                <i class="fa fa-chevron-left"></i> macOS 下以不同语言启动应用程序
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/05/npm-error-extraneous/" rel="prev" title="npm extraneous error 经历">
-                npm extraneous error 经历 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -742,9 +719,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/';
-          this.page.identifier = '2017/04/27/osx-run-application-in-a-different-language/';
-          this.page.title = 'macOS 下以不同语言启动应用程序';
+          this.page.url = 'http://www.skyjia.com/2017/05/05/npm-error-extraneous/';
+          this.page.identifier = '2017/05/05/npm-error-extraneous/';
+          this.page.title = 'npm extraneous error 经历';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://skyjia.disqus.com/embed.js';

@@ -301,6 +301,153 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.skyjia.com/2017/05/05/npm-error-extraneous/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sky Jia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="榕树的随想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/05/npm-error-extraneous/" itemprop="url">
+                  npm extraneous error 经历
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T15:25:46+08:00">
+                2017-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/05/npm-error-extraneous/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/05/npm-error-extraneous/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天在例行检查清理 npm package 时遇到了狗血的<code>npm ERR! extraneous</code>问题：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">$ npm ls -gp --depth=0</div><div class="line">/usr/<span class="built_in">local</span>/lib</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/babel-eslint</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/bower</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/browserify</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/coffee-script</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/doctoc</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/electron-prebuilt</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/eslint</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/eslint-plugin-react</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/gitbook-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/google-protobuf</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/graceful-fs</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/grunt-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/gulp</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/gulp-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/hexo-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/js-beautify</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/less</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/npm</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/protobufjs</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/tern</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/typescript</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/vue-cli</div><div class="line">/usr/<span class="built_in">local</span>/lib/node_modules/yo</div><div class="line">npm ERR! extraneous: acorn@4.0.4 /usr/<span class="built_in">local</span>/lib/node_modules/eslint/node_modules/acorn</div><div class="line">npm ERR! extraneous: acorn-jsx@3.0.1 /usr/<span class="built_in">local</span>/lib/node_modules/eslint/node_modules/acorn-jsx</div><div class="line">npm ERR! extraneous: ajv@4.10.3 /usr/<span class="built_in">local</span>/lib/node_modules/eslint/node_modules/ajv</div><div class="line">.......</div></pre></td></tr></table></figure>
+<p>索性来个彻底的清理：</p>
+<ul>
+<li>Global packages中，除了<code>npm</code> package，其它的package先全部删除</li>
+<li>安装<code>cnpm</code>，替代<code>npm</code> （你懂的），然后安装回所需的Global packages</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="comment"># 删除npm之外的其它package</span></div><div class="line">$ npm ls -gp --depth=0 | awk -F/ <span class="string">'/node_modules/ &amp;&amp; !/\/npm$/ &#123;print $NF&#125;'</span> | xargs npm -g rm</div></pre></td></tr></table></figure>
+<p>根据淘宝NPM镜像（<a href="https://npm.taobao.org/）安装指导，安装`cnpm`" target="_blank" rel="external">https://npm.taobao.org/）安装指导，安装`cnpm`</a>:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p><strong>原因分析</strong></p>
+<p>本地的node.js是使用Homebrew安装的，由于node版本更新，导致一些安装在global的package出现extraneous问题。修复方式是重新安装（或更新）有问题的package。</p>
+<p><strong>！！！此处敲黑板！！！</strong></p>
+<p>由于Homebrew管理的node会经常升级更新，并且<code>cnpm</code>默认会将package安装到当前运行版本的node安装文件夹之中，这个默认行为会在node再次升级后导致已安装的全局package失效。因此，我们需要手动修改<code>npm</code>的<code>prefix</code>设置。通过修改<code>~/.cnpmrc</code>，增加如下一行记录：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">prefix = <span class="string">"/usr/local"</span></div></pre></td></tr></table></figure>
+<p>此时检查cnpm的配置会发现<code>prefix</code>的默认值已经被覆盖：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ cnpm -g config ls <span class="_">-l</span> | grep <span class="string">"prefix"</span></div><div class="line">prefix = <span class="string">"/usr/local"</span></div><div class="line">; prefix = <span class="string">"/usr/local/Cellar/node/7.9.0"</span> (overridden)</div><div class="line">save-prefix = <span class="string">"^"</span></div><div class="line">tag-version-prefix = <span class="string">"v"</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.skyjia.com/2017/04/27/osx-run-application-in-a-different-language/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -504,7 +651,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -526,7 +673,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
