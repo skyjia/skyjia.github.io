@@ -562,13 +562,12 @@
 <li>文字格式和用语有差异</li>
 <li>不合格的英文翻译</li>
 </ul>
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-39-36.png" alt="2017-04-27_10-39-36.png" title="">
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-57-13.png" alt="2017-04-27_10-57-13.png" title="">
+<p><img src="/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-39-36.png" alt=""><br><img src="/2017/04/27/osx-run-application-in-a-different-language/2017-04-27_10-57-13.png" alt=""></p>
 <p>但是，Mac QQ并没有提供选择界面语言的选项，想通过软件内配置切换语言这条路是走不通了。其实Mac QQ是支持多语言的，默认行为是根据当前操作系统配置的语言首选项显示QQ的界面语言。通过 <strong>Show Package Contents</strong> 查看QQ应用程序可以看到内部支持的多语言配置文件信息：</p>
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-16-23.png" alt="2017-05-01_09-16-23.png" title="">
+<p><img src="/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-16-23.png" alt=""></p>
 <p>我当前OS环境配置的系统语言是英文，暂时也不想将系统的语言改回中文，因此通过以下命令行方式指定语言并启动QQ：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ open <span class="_">-a</span> QQ --args -AppleLanguages <span class="string">'(zh-CN)'</span></div></pre></td></tr></table></figure>
-<img src="/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-20-08.png" alt="2017-05-01_09-20-08.png" title="">
+<p><img src="/2017/04/27/osx-run-application-in-a-different-language/2017-05-01_09-20-08.png" alt=""></p>
 <blockquote>
 <p>实测环境：macOS Sierra 10.12.4</p>
 </blockquote>
