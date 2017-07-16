@@ -1,0 +1,852 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="kali,linux," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="写作本文时，使用的是 Kali Linux 2017.1 1234Distributor ID:KaliDescription:Kali GNU/Linux RollingRelease:kali-rollingCodename:kali-rolling 工作环境：VirtualBox VM on MacBook Pro内容持续更新。  1 基本系统配置1.1 切换到root用户su 1.2 判">
+<meta name="keywords" content="kali,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kali Linux 安装后配置">
+<meta property="og:url" content="http://www.skyjia.com/2017/07/16/Kali-Linux-Post-Installation/index.html">
+<meta property="og:site_name" content="榕树的随想">
+<meta property="og:description" content="写作本文时，使用的是 Kali Linux 2017.1 1234Distributor ID:KaliDescription:Kali GNU/Linux RollingRelease:kali-rollingCodename:kali-rolling 工作环境：VirtualBox VM on MacBook Pro内容持续更新。  1 基本系统配置1.1 切换到root用户su 1.2 判">
+<meta property="og:updated_time" content="2017-07-16T07:04:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kali Linux 安装后配置">
+<meta name="twitter:description" content="写作本文时，使用的是 Kali Linux 2017.1 1234Distributor ID:KaliDescription:Kali GNU/Linux RollingRelease:kali-rollingCodename:kali-rolling 工作环境：VirtualBox VM on MacBook Pro内容持续更新。  1 基本系统配置1.1 切换到root用户su 1.2 判">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '1LEDD3C4V0',
+      apiKey: '1324e7ee7d1474d629ade0d83d3d58b5',
+      indexName: 'skyjia-blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.skyjia.com/2017/07/16/Kali-Linux-Post-Installation/"/>
+
+
+
+
+
+  <title>Kali Linux 安装后配置 | 榕树的随想</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">榕树的随想</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Sky Jia</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.skyjia.com/2017/07/16/Kali-Linux-Post-Installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sky Jia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="榕树的随想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Kali Linux 安装后配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T14:49:09+08:00">
+                2017-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/16/Kali-Linux-Post-Installation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/07/16/Kali-Linux-Post-Installation/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>写作本文时，使用的是 Kali Linux 2017.1</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Distributor ID:Kali</div><div class="line">Description:Kali GNU/Linux Rolling</div><div class="line">Release:kali-rolling</div><div class="line">Codename:kali-rolling</div></pre></td></tr></table></figure>
+<p>工作环境：VirtualBox VM on MacBook Pro<br>内容持续更新。</p>
+</blockquote>
+<h2 id="1-基本系统配置"><a href="#1-基本系统配置" class="headerlink" title="1 基本系统配置"></a>1 基本系统配置</h2><h3 id="1-1-切换到root用户"><a href="#1-1-切换到root用户" class="headerlink" title="1.1 切换到root用户"></a>1.1 切换到root用户</h3><p><code>su</code></p>
+<h3 id="1-2-判断kali版本"><a href="#1-2-判断kali版本" class="headerlink" title="1.2 判断kali版本"></a>1.2 判断kali版本</h3><p><code>lsb_release -a</code></p>
+<h3 id="1-3-更新-Packages"><a href="#1-3-更新-Packages" class="headerlink" title="1.3 更新 Packages"></a>1.3 更新 Packages</h3><ul>
+<li>首次启动先执行更新。</li>
+<li>日常维护每四天更新一次。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">apt-get clean</div><div class="line">apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade </div><div class="line"><span class="meta"></span></div><div class="line">#<span class="bash">linux内核更新</span></div><div class="line">apt-get install linux-headers-$(uname -r)</div><div class="line"></div><div class="line">apt-get autoremove &amp;&amp; apt-get clean</div></pre></td></tr></table></figure>
+<h3 id="1-4-配置-OpenSSH-Server"><a href="#1-4-配置-OpenSSH-Server" class="headerlink" title="1.4 配置 OpenSSH Server"></a>1.4 配置 OpenSSH Server</h3><p>安装配置 openssh-server:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">apt list openssh-server</div><div class="line"><span class="comment"># If not see the version with [installed],  use this command to install it</span></div><div class="line">apt install openssh-server</div><div class="line"></div><div class="line"><span class="comment"># To backup the original keys first as a precaution use</span></div><div class="line">mkdir /etc/ssh/default_keys</div><div class="line">mv /etc/ssh/ssh_host_* /etc/ssh/default_keys/</div><div class="line"></div><div class="line"><span class="comment"># Regenerate the keys</span></div><div class="line">dpkg-reconfigure openssh-server</div></pre></td></tr></table></figure>
+<p>修改 <code>/etc/ssh/sshd_config</code>文件:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">PermitRootLogin yes</div><div class="line">PasswordAuthentication yes</div><div class="line">PubkeyAuthentication yes</div></pre></td></tr></table></figure>
+<p>启动服务:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">systemctl start ssh.socket</div><div class="line">systemctl <span class="built_in">enable</span> ssh.service</div><div class="line">systemctl start ssh.service</div></pre></td></tr></table></figure>
+<blockquote>
+<p> 参考：</p>
+<ul>
+<li><a href="http://lmgsecurity.com/blog/2017/05/18/enable-start-ssh-kali-linux/" target="_blank" rel="external">http://lmgsecurity.com/blog/2017/05/18/enable-start-ssh-kali-linux/</a></li>
+<li><a href="https://www.tecmint.com/disable-or-enable-ssh-root-login-and-limit-ssh-access-in-linux/" target="_blank" rel="external">https://www.tecmint.com/disable-or-enable-ssh-root-login-and-limit-ssh-access-in-linux/</a></li>
+</ul>
+</blockquote>
+<h3 id="1-5-添加新用户"><a href="#1-5-添加新用户" class="headerlink" title="1.5 添加新用户"></a>1.5 添加新用户</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加新用户 skyjia</span></div><div class="line">useradd -m skyjia</div><div class="line"><span class="comment"># 添加到 sudo 组</span></div><div class="line">usermod -a -G sudo skyjia</div><div class="line"><span class="comment"># 添加到 vboxsf 组 (支持 VirtualBox 文件共享访问)</span></div><div class="line">usermod -a -G vboxsf skyjia</div></pre></td></tr></table></figure>
+<h2 id="2-Gnome桌面"><a href="#2-Gnome桌面" class="headerlink" title="2 Gnome桌面"></a>2 Gnome桌面</h2><h3 id="2-1-配置-HiDPI"><a href="#2-1-配置-HiDPI" class="headerlink" title="2.1 配置 HiDPI"></a>2.1 配置 HiDPI</h3><p>由于工作环境使用的是Retina显示屏，需要对桌面进行HiDPI设置，以达到正常文字显示效果。</p>
+<ol>
+<li><p>在VirtualBox中修改虚拟机设置:</p>
+<p><strong>Display</strong> &gt; <strong>HiDPI Support</strong>: 勾选<code>Use Unscaled HiDPI Output</code></p>
+</li>
+<li><p>修改完成后重启虚拟机;</p>
+</li>
+<li><p>登陆Kali，在 <strong>Tweak Tool</strong> 中设置，将 <strong>Windows</strong> &gt; <strong>HiDPI</strong> &gt; <strong>Window scaling</strong> 设定为 <code>2</code>.</p>
+</li>
+<li><p>执行命令，修改桌面界面缩放比例：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gsettings <span class="built_in">set</span> org.gnome.desktop.interface scaling-factor 2</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="2-2-禁用桌面锁屏"><a href="#2-2-禁用桌面锁屏" class="headerlink" title="2.2 禁用桌面锁屏"></a>2.2 禁用桌面锁屏</h3><p><strong>Settings</strong> &gt; <strong>Power</strong> &gt; <strong>Power Saving</strong>: <code>Never</code></p>
+<h2 id="3-个性化设置与常用软件"><a href="#3-个性化设置与常用软件" class="headerlink" title="3 个性化设置与常用软件"></a>3 个性化设置与常用软件</h2><h3 id="3-1-dotfiles"><a href="#3-1-dotfiles" class="headerlink" title="3.1 dotfiles"></a>3.1 dotfiles</h3><p>我的 dotfiles:  <a href="https://github.com/skyjia/dotfiles" target="_blank" rel="external">https://github.com/skyjia/dotfiles</a></p>
+<h3 id="3-2-科学上网"><a href="#3-2-科学上网" class="headerlink" title="3.2 科学上网"></a>3.2 科学上网</h3><p>TBD</p>
+<h2 id="5-注意事项"><a href="#5-注意事项" class="headerlink" title="5 注意事项"></a>5 注意事项</h2><h3 id="5-1-避免安装Flash-Player"><a href="#5-1-避免安装Flash-Player" class="headerlink" title="5.1 避免安装Flash Player"></a>5.1 避免安装Flash Player</h3><p>不要装</p>
+<h3 id="5-2-不要在你安装的kali-2-0中添加额外的源"><a href="#5-2-不要在你安装的kali-2-0中添加额外的源" class="headerlink" title="5.2 不要在你安装的kali 2.0中添加额外的源"></a>5.2 不要在你安装的kali 2.0中添加额外的源</h3><ul>
+<li>如果因为某些原因，在安装kali过程中，当被问到使用网络镜像时选择了<code>No</code>，可能会导致你的<strong>sources.list</strong>文件中丢失一些条目。如果是这种情况，检查一下<a href="http://docs.kali.org/general-use/kali-linux-sources-list-repositories" target="_blank" rel="external">官方的源列表</a>来确定哪些条目应该在那个文件中。即使很多非官方的说明让你这样做，你也应该避免在<strong>sources.list</strong>文件中添加多余的源。</li>
+<li>不要添加kali-dev, kali-rolling 或者任何其他的kali源除非你有特别的理由，一般情况下你是没有的。</li>
+<li>如果你不得不添加额外的源，在<code>/etc/apt/sources.list.d/</code>目录下添加一个新的源文件。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sky Jia
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.skyjia.com/2017/07/16/Kali-Linux-Post-Installation/" title="Kali Linux 安装后配置">http://www.skyjia.com/2017/07/16/Kali-Linux-Post-Installation/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/kali/" rel="tag"># kali</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/05/npm-error-extraneous/" rel="next" title="npm extraneous error 经历">
+                <i class="fa fa-chevron-left"></i> npm extraneous error 经历
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="Sky Jia" />
+          <p class="site-author-name" itemprop="name">Sky Jia</p>
+           
+              <p class="site-description motion-element" itemprop="description">有信仰的活着</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/skyjia" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基本系统配置"><span class="nav-number">1.</span> <span class="nav-text">1 基本系统配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-切换到root用户"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 切换到root用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-判断kali版本"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 判断kali版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-更新-Packages"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 更新 Packages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-配置-OpenSSH-Server"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 配置 OpenSSH Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-添加新用户"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 添加新用户</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Gnome桌面"><span class="nav-number">2.</span> <span class="nav-text">2 Gnome桌面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-配置-HiDPI"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 配置 HiDPI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-禁用桌面锁屏"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 禁用桌面锁屏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-个性化设置与常用软件"><span class="nav-number">3.</span> <span class="nav-text">3 个性化设置与常用软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-dotfiles"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 dotfiles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-科学上网"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 科学上网</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-注意事项"><span class="nav-number">4.</span> <span class="nav-text">5 注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-避免安装Flash-Player"><span class="nav-number">4.1.</span> <span class="nav-text">5.1 避免安装Flash Player</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-不要在你安装的kali-2-0中添加额外的源"><span class="nav-number">4.2.</span> <span class="nav-text">5.2 不要在你安装的kali 2.0中添加额外的源</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sky Jia</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://skyjia.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.skyjia.com/2017/07/16/Kali-Linux-Post-Installation/';
+          this.page.identifier = '2017/07/16/Kali-Linux-Post-Installation/';
+          this.page.title = 'Kali Linux 安装后配置';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://skyjia.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
